@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Достояние Оренбуржья</string>
+    <string name="title_activity_2">Activity2</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_brend">BrendActivity</string>
+    <string name="title_activity_oren_hlado_combinat">OrenHladoCombinat</string>
+    <string name="title_activity_oren_shal">OrenShal</string>
+    <string name="title_activity_buzuluk_milk">BuzulukMilk</string>
+    <string name="title_activity_cullture">CulltureActivity</string>
+</resources>
