@@ -104,7 +104,7 @@ class BrendActivity : ComponentActivity() {
                 .fillMaxSize()
                 .background(Green80)
                 .padding(10.dp),
-            verticalArrangement = Arrangement.Top,
+            verticalArrangement = Arrangement.SpaceEvenly,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(

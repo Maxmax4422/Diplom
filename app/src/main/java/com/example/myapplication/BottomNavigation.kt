@@ -1,12 +1,11 @@
 package com.example.myapplication
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material.BottomNavigationItem
+import androidx.compose.material.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
@@ -25,45 +24,31 @@ fun BottomNavigation(
         BottomItem.SecondScreen,
         BottomItem.ThreeScreen,
 
-    )
-    NavigationBar(
-        containerColor = Color.White,
-        modifier = Modifier.graphicsLayer { shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
-                                          clip = true},
-        contentColor = Color.Black,
+        )
+    androidx.compose.material.BottomNavigation(
+        backgroundColor = Color.White,
+        modifier = Modifier.graphicsLayer {
+            shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
+            clip = true
+        }
     ) {
-        val currentRoute = navController.currentBackStackEntryAsState().value?.destination?.route
+        val backStackEntry by navController.currentBackStackEntryAsState()
+        val currentRout = backStackEntry?.destination?.route
         listItems.forEach { item ->
-            NavigationBarItem(
-
-               
-
-                selected = currentRoute == item.route,
-                modifier = Modifier.graphicsLayer { shape = RoundedCornerShape(topEnd = 20.dp, topStart = 20.dp)
-                                                  clip = true},
+            BottomNavigationItem(
+                selected = currentRout == item.route,
                 onClick = {
                     navController.navigate(item.route)
                 },
-                icon = {
-                    Image(
-                        painter = painterResource(id = item.iconId),
-                        contentDescription = "Icon",
-                        modifier = Modifier
-                            .size(40.dp)
-                            .padding(bottom = 10.dp)
+                icon = { Icon(painter = painterResource(id = item.iconId),
+                    contentDescription ="icon" ) },
+                label = { Text(text = item.title, fontSize = 14.sp)},
+                selectedContentColor = Color.Black,
+                unselectedContentColor = Color.Gray
 
-                    )
-                },
-                                label = {
-                    Text(
-                        text = item.title,
-                        fontSize = 11.sp,
-                        modifier = Modifier.padding(top = 25.dp)
-
-                    )
-                },
 
             )
         }
+
     }
 }
