@@ -32,15 +32,13 @@ import com.example.myapplication.ui.theme.Green80
 fun HomeScreen(
     onClickBack: () -> Unit,
     click: () -> Unit,
+    clickBack:()->Unit
 ) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Green80)
     ) {
-        Image(
-            painter = painterResource(id = R.drawable.strela), contentDescription = "",
-        )
 
     }
 
@@ -67,6 +65,7 @@ fun HomeScreen(
 
         Spacer(modifier = Modifier.size(30.dp))
         Image(
+
             painter = painterResource(id = R.drawable.culture_2),
             contentDescription = "culture",
             contentScale = ContentScale.Crop,
@@ -83,6 +82,7 @@ fun HomeScreen(
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .sizeIn(minWidth = 182.dp, minHeight = 162.dp)
+                .clickable { clickBack.invoke() }
         )
 
     }

@@ -7,5 +7,12 @@
     <string name="title_activity_oren_shal">OrenShal</string>
     <string name="title_activity_buzuluk_milk">BuzulukMilk</string>
     <string name="title_activity_cullture">CulltureActivity</string>
+    <string name="title_activity_place">Place</string>
+    <string name="title_activity_theatre_piero">TheatrePiero</string>
+    <string name="title_activity_dram_theatre">DramTheatre</string>
+    <string name="title_activity_museum_history">MuseumHistory</string>
+    <string name="title_activity_bor">Bor</string>
+    <string name="title_activity_tur_in">TurIn</string>
+    <string name="title_activity_svetie_pasheri">Svetie_pasheri</string>
 
 </resources>

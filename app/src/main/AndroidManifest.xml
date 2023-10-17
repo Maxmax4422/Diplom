@@ -15,6 +15,41 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".Svetie_pasheri"
+            android:exported="false"
+            android:label="@string/title_activity_svetie_pasheri"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".TurIn"
+            android:exported="false"
+            android:label="@string/title_activity_tur_in"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".Bor"
+            android:exported="false"
+            android:label="@string/title_activity_bor"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".MuseumHistory"
+            android:exported="false"
+            android:label="@string/title_activity_museum_history"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".DramTheatre"
+            android:exported="false"
+            android:label="@string/title_activity_dram_theatre"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".TheatrePiero"
+            android:exported="false"
+            android:label="@string/title_activity_theatre_piero"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".Place"
+            android:exported="false"
+            android:label="@string/title_activity_place"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".CulltureActivity"
             android:exported="false"
             android:label="@string/title_activity_cullture"

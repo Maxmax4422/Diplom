@@ -21,7 +21,9 @@ class MainActivity2 : ComponentActivity() {
                 click = {
                     val intent = Intent(this@MainActivity2, CulltureActivity::class.java)
                     startActivity(intent)
-                })
+                },
+                clickBack = {val intent = Intent(this@MainActivity2, Place::class.java )
+                startActivity(intent)})
             }
 
         }

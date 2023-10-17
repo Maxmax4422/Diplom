@@ -9,7 +9,8 @@ import androidx.navigation.compose.composable
 fun NavGraph(
     navHostController: NavHostController,
     onClickBack: () -> Unit,
-    click:()->Unit
+    click:()->Unit,
+    clickBack:()->Unit
 
 ) {
     NavHost(
@@ -19,7 +20,7 @@ fun NavGraph(
 
     ) {
         composable("Главная") {
-            HomeScreen(onClickBack, click)
+            HomeScreen(onClickBack, click, clickBack)
         }
         composable("Обращение") {
             WebPager(url = "https://forms.yandex.ru/u/6516640d693872a43ed68412/")
