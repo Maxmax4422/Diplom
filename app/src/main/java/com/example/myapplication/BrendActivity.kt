@@ -107,6 +107,7 @@ class BrendActivity : ComponentActivity() {
     @Composable
     fun BrendScreen() {
 
+
         Column(
 
             modifier = Modifier
